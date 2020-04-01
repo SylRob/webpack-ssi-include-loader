@@ -1,7 +1,6 @@
 # Webpack SSI Include Loader
 
 [![install size](https://packagephobia.now.sh/badge?p=webpack-ssi-include-loader)](https://packagephobia.now.sh/result?p=webpack-ssi-include-loader)
-[![CircleCI](https://circleci.com/gh/SylRob/webpack-ssi-include-loader.svg?style=svg)](https://circleci.com/gh/SylRob/webpack-ssi-include-loader)
 
 ### Description
 this package was created to help dev that have to work on with SSI and webpack.
