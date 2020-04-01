@@ -1,25 +1,9 @@
-const loaderUtils = require("loader-utils");
-const assign = require("object-assign");
-const SSI = require("./lib/ssi");
-
-function getLoaderConfig(context) {
-	const query = loaderUtils.parseQuery(context.query);
-	const configKey = query.config || 'webpackSsiIncludeLoader';
-	const config = context.options &&
-              context.options.hasOwnProperty(configKey) ?
-              context.options[configKey] :
-              {};
-
-	delete query.config;
-
-	return assign(query, config);
-}
+const SSI = require('./lib/ssi');
 
 module.exports = function (source) {
-  const config = getLoaderConfig(this);
-	const ssi = new SSI(config);
+  const ssi = new SSI(this.query);
 
-	this.cacheable && this.cacheable();
+  this.cacheable && this.cacheable();
 
-	return ssi(source);
+  return ssi(source);
 };
