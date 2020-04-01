@@ -11,7 +11,7 @@ module: {
                 loader: 'html-loader', // Used to output as html
               },
               {
-                loader: 'webpack-ssi-loader',
+                loader: 'webpack-ssi-include-loader',
                 options: {
                   localPath: path.join(__dirname, '/public'),
                   location: 'https://carservice.rakuten.co.jp/',
