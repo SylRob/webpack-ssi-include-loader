@@ -19,6 +19,5 @@
     "loader-utils": "^2.0.0",
     "object-assign": "^4.1.1",
     "sync-request": "^6.1.0"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
