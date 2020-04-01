@@ -1,0 +1,22 @@
+{
+  "name": "webpack-ssi-include-loader",
+  "version": "0.0.1",
+  "description": "Webpack SSI Include Loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ssi",
+    "webpack"
+  ],
+  "author": "ROBERT Sylvain",
+  "license": "MIT",
+  "dependencies": {
+    "chardet": "^1.0.0",
+    "iconv-lite": "^0.5.1",
+    "loader-utils": "^2.0.0",
+    "object-assign": "^4.1.1",
+    "sync-request": "^6.1.0"
+  }
+}
