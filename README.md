@@ -14,7 +14,7 @@ module: {
                 loader: 'webpack-ssi-include-loader',
                 options: {
                   localPath: path.join(__dirname, '/public'),
-                  location: 'https://carservice.rakuten.co.jp/',
+                  location: 'https://your.website.com/',
                 },
               },
             ],
