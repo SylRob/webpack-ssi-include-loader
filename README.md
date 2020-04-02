@@ -1,6 +1,9 @@
 # Webpack SSI Include Loader
 
-[![install size](https://packagephobia.now.sh/badge?p=webpack-ssi-include-loader)](https://packagephobia.now.sh/result?p=webpack-ssi-include-loader)
+[![install size](https://packagephobia.now.sh/badge?p=webpack-ssi-include-loader)](https://packagephobia.now.sh/result?p=webpack-ssi-include-loader) ![version](https://img.shields.io/badge/version-1.0.8-blue)
+
+[![NPM](https://nodei.co/npm/webpack-ssi-include-loader.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/webpack-ssi-include-loader)
+
 
 ### Description
 this package was created to help dev that have to work on with SSI and webpack.
@@ -17,6 +20,10 @@ if found any :
  - if not, return an error message
 
 ### Usage
+```
+yarn add webpack-ssi-include-loader
+```
+
 ```js
 module: {
       rules: [
