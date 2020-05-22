@@ -1,6 +1,6 @@
 {
   "name": "webpack-ssi-include-loader",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Webpack SSI Include Loader",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "iconv-lite": "^0.5.1",
     "loader-utils": "^2.0.0",
     "object-assign": "^4.1.1",
-    "sync-request": "^6.1.0"
+    "then-request": "^6.0.2"
   }
 }
