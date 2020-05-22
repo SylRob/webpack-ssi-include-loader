@@ -10,6 +10,6 @@ module.exports = function (source) {
     cb(null, content);
   })
   .catch((e) => {
-    cb(e, content);
+    cb(e);
   });
 };
