@@ -1,11 +1,9 @@
 {
   "name": "webpack-ssi-include-loader",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Webpack SSI Include Loader",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": "https://github.com/SylRob/webpack-ssi-include-loader.git",
   "keywords": [
     "ssi",
