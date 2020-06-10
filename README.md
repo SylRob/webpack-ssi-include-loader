@@ -48,9 +48,10 @@ module: {
 
 
 ### Parameters
-| Parameters      | Type          | Default        | Description   |
-| --------------- |:-------------:|:--------------:| :------------ |
-| location        | string        |                | http url where the file can be dl ex:'https://mywebsite.com/'   |
-| localPath       | string        |                | path where the include files could be found ex: path.join(__dirname, '/public') |
-| depthMax        | number        |    4           | how far should the SSI include should look for match withing inluded files (don't touch unless you know what you are doing) |
-| includesMatcher | regex         | /&lt;!--\s?#\s?include\s+(?:virtual&#124;file)=&quot;([^&quot;]+)&quot;(?:\s+stub=&quot;(\w+)&quot;)?\s?--&gt;/ | regex of the matching string (don't touch unless you know what you are doing) |
+| Parameters       | Type          | Default        | Description   |
+| ---------------- |:-------------:|:--------------:| :------------ |
+| location         | string        |                | http url where the file can be dl ex:'https://mywebsite.com/'   |
+| localPath        | string        |                | path where the include files could be found ex: path.join(__dirname, '/public') |
+| depthMax         | number        |    4           | how far should the SSI include should look for match within included files (don't touch unless you know what you are doing) |
+| disableLocalScan | boolean       |    false       | if you want the script to look only on the `location` url |
+| includesMatcher  | regex         | /&lt;!--\s?#\s?include\s+(?:virtual&#124;file)=&quot;([^&quot;]+)&quot;(?:\s+stub=&quot;(\w+)&quot;)?\s?--&gt;/ | regex of the matching string (don't touch unless you know what you are doing) |
