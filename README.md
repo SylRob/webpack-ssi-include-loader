@@ -12,6 +12,7 @@ it will help for setting a dev environment.
 scan html content looking for pattern like :
 ```
 <!--#include virtual="/your/path/file.html" -->
+<!--#include file"/your/path/file.html" -->
 ```
 
 if found any :
@@ -55,3 +56,4 @@ module: {
 | depthMax         | number        |    4           | how far should the SSI include should look for match within included files (don't touch unless you know what you are doing) |
 | disableLocalScan | boolean       |    false       | if you want the script to look only on the `location` url |
 | includesMatcher  | regex         | /&lt;!--\s?#\s?include\s+(?:virtual&#124;file)=&quot;([^&quot;]+)&quot;(?:\s+stub=&quot;(\w+)&quot;)?\s?--&gt;/ | regex of the matching string (don't touch unless you know what you are doing) |
+| defaultCharset   | string        |    utf-8       | force the file reader to convert the file content into a specific charset |
