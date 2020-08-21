@@ -58,5 +58,4 @@ module: {
 | includesMatcher  | regex         | /&lt;!--\s?#\s?include\s+(?:virtual&#124;file)=&quot;([^&quot;]+)&quot;(?:\s+stub=&quot;(\w+)&quot;)?\s?--&gt;/ | regex of the matching string (don't touch unless you know what you are doing) |
 | defaultCharset   | string        |    utf-8       | force the file reader to convert the file content into a specific charset |
 | quietError       | boolean       |    false       | if the file cannot be found on local or online replace it with an error message or not |
-| onFileMatch      | function      |    null        | callback on each SSI line match with 3 parameters : filePath<string>, fileContent<string>, isLocal<boolean>.
-If you return a string it will override and replace the content |
+| onFileMatch      | function      |    null        | callback on each SSI line match with 3 parameters : filePath&#60;string&#62;, fileContent&#60;string&#62;, isLocal&#60;boolean&#62;.<br> If you return a string it will override and replace the content |
