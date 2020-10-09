@@ -3,7 +3,9 @@
   "version": "1.5.2",
   "description": "Webpack SSI Include Loader",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "repository": "https://github.com/SylRob/webpack-ssi-include-loader.git",
   "keywords": [
     "ssi",
@@ -12,8 +14,23 @@
   "author": "ROBERT Sylvain",
   "license": "MIT",
   "dependencies": {
+    "babel-jest": "^26.5.2",
     "chardet": "^1.0.0",
+    "html-loader-jest": "^0.2.1",
     "iconv-lite": "^0.5.1",
+    "jest": "^26.5.0",
+    "jest-test-performance": "^1.0.1",
     "then-request": "^6.0.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["jest-test-performance"],
+    "moduleFileExtensions": [
+      "js",
+      "html"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.html?$": "html-loader-jest"
+    }
   }
 }
