@@ -59,3 +59,4 @@ module: {
 | defaultCharset   | string        |    utf-8       | force the file reader to convert the file content into a specific charset |
 | quietError       | boolean       |    false       | if the file cannot be found on local or online replace it with an error message or not |
 | onFileMatch      | function      |    null        | callback on each SSI line match with 3 parameters : filePath&#60;string&#62;, fileContent&#60;string&#62;, isLocal&#60;boolean&#62;.<br> If you return a string it will override and replace the content |
+| saveToDisk   | boolean        |    false       | saves files fetched online to disk (if not present) |
