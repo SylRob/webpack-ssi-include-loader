@@ -9,6 +9,8 @@ module.exports = function (source) {
         // so the file can be "watch" by webpack
         this.addDependency(filePath);
       }
+
+      return this.query.onFileMatch && this.query.onFileMatch(filePath, fileContent, isLocal);
     },
   });
 
