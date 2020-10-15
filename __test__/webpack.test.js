@@ -3,8 +3,36 @@ const path = require('path');
 const html = require('../__mocks__/html/simple-inc.html');
 
 describe('Data from Webpack', () => {
-  it('execute onFileMatch and return expected data', async () => {
-    let result = {
+
+  // set the webpack prework
+  this.query = {
+    localPath: path.join(__dirname, '../'),
+    location: 'https://carservice.rakuten.co.jp/',
+  };
+
+  beforeEach(() => {
+    this.addDependency = () => null;
+    this.async = () => () => null;
+  });
+
+  const webpack = loader.bind(this);
+
+  it('should find SSI line and import expected data', async () => {
+    let result = null;
+
+    await new Promise((resolve) => {
+      this.async = () => (error, data) => {
+        result = data;
+        resolve();
+      };
+      webpack(`<!--#include virtual="__mocks__/html/simple-inc.html" -->`);
+    });
+    
+    expect(result).toEqual(html);
+  });
+
+  it('should execute onFileMatch and return expected data', async () => {
+    let cb = {
       filePath: null,
       fileContent: null,
       isLocal: false,
@@ -15,23 +43,20 @@ describe('Data from Webpack', () => {
       isLocal: true,
     };
 
-    this.query = {
-      localPath: path.join(__dirname, '../'),
-      location: 'https://carservice.rakuten.co.jp/',
-      onFileMatch: (filePath, fileContent, isLocal) => {
-        result = {
+    await new Promise((resolve) => {
+      this.query.onFileMatch = (filePath, fileContent, isLocal) => {
+        cb = {
           filePath,
           fileContent,
           isLocal
         };
-      }
-    };
-    this.async = () => null;
-    this.addDependency = () => null;
 
-    const webpack = loader.bind(this);
-    await webpack(`<!--#include virtual="__mocks__/html/simple-inc.html" -->`);
+        resolve();
+      };
 
-    expect(result).toEqual(expectedResult);
+      webpack(`<!--#include virtual="__mocks__/html/simple-inc.html" -->`);
+    });
+
+    expect(cb).toEqual(expectedResult);
   });
 });

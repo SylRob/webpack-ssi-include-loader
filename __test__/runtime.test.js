@@ -18,6 +18,6 @@ describe('Process performances', () => {
     const timerDiff = Date.now() - timerStart;
 
     // time is just an avarage of my machine
-    expect(timerDiff).toBeLessThanOrEqual(190);
+    expect(timerDiff).toBeLessThanOrEqual(250);
   });
 });
