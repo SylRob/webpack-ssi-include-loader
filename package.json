@@ -1,6 +1,6 @@
 {
   "name": "webpack-ssi-include-loader",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "Webpack SSI Include Loader",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,9 @@
     "then-request": "^6.0.2"
   },
   "jest": {
-    "setupFilesAfterEnv": ["jest-test-performance"],
+    "setupFilesAfterEnv": [
+      "jest-test-performance"
+    ],
     "moduleFileExtensions": [
       "js",
       "html"
